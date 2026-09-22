@@ -89,10 +89,14 @@ and Halden Bay.
      visible. Milestone 4. -->
 
 **Question:**
-
+"Is Brightwater walkable?"
 **Answer:**
 
 ```
+
+Yes, Brightwater is walkable; the town can be crossed end to end in about 35 minutes. This information comes from `guide_brightwater.md`.
+
+Sources retrieved: guide_brightwater.md, guide_kestrelford.md, guide_regional_transport.md, guide_walking.md
 ```
 
 **My relevance cutoff:**
@@ -108,7 +112,14 @@ and Halden Bay.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+|What is the least accessible city?  | yes | 0.555 |
+|"Several riverside businesses in Brightwater close entirely during which months?" | yes | 0.178 |
+|"How to get to Halden Bay?" | yes | 0.295 |
+|"When is it best to visit Halden Bay?" | yes | 0.347 |
+|"What to see in Corry Vale?" | yes | 0.451 |
+|"Is Brightwater walkable?" | yes | 0.435 |
+|"What is the capital of Mongolia?" | no | 0.887 |
+|"What is the recommended dosage of ibuprofen for a headache?" | no | 0.829 |
 
 ## How I Used AI
 
