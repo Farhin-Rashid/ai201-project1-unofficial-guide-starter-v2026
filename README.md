@@ -45,36 +45,42 @@ When inspecting the campus_life corpus in Milestone 1, I noticed the documents a
 
      Milestone 3. -->
 
-**Chunk 1** — source: `admin_add_drop_deadline.txt#0` — produced by: `chunker.py::split_documents`
+**Chunk 1** — source: ` guide_accessibility.md#0 ` — produced by: `chunker.py::split_documents`
 
 ```
-On the add/drop deadline
+# Getting around the region with limited mobility
 
-You can add a course through the end of the second week.
+An honest assessment rather than a promotional one.
 ```
 
-**Chunk 2** — source: `course_cs_340.txt#2` — produced by: ` chunker.py::split_documents`
+**Chunk 2** — source: ` guide_corry_vale.md#7` — produced by: ` chunker.py::split_documents`
 
 ```
-Assessment: one midterm and a final, both open-book.
+There is one taxi, based in the largest village, and it must be booked a day ahead.
 ```
 
-**Chunk 3** — source: ` course_stat_150.txt#3` — produced by: `chunker.py::split_documents`
+**Chunk 3** — source: `  guide_elder_ness.md#25` — produced by: `chunker.py::split_documents`
 
 ```
-No curve, but the lowest midterm is dropped.
+The nearest full hospital is in Brightwater; there is
+a minor injuries unit locally with limited hours.
 ```
 
-**Chunk 4** — source: ` dining_the_ridgeway_cafe_followup.txt#3` — produced by: `chunker.py::split_documents`
+**Chunk 4** — source: ` guide_kestrelford.md#18` — produced by: `chunker.py::split_documents`
 
 ```
-Also worth saying: seating is tight; about 40 seats for a building of 900.
+## When to go
+
+Late spring and early autumn.
 ```
 
-**Chunk 5** — source: `housing_morrow_house.txt#1` — produced by: `chunker.py::split_documents`
+**Chunk 5** — source: `guide_regional_transport.md#10 ` — produced by: `chunker.py::split_documents`
 
 ```
-Built 1954, partially renovated 2008.
+## Driving
+
+Roads are good between the towns and poor on the approaches to both Kestrelford
+and Halden Bay.
 ```
 
 ## Sample Answer
@@ -83,10 +89,14 @@ Built 1954, partially renovated 2008.
      visible. Milestone 4. -->
 
 **Question:**
-
+"Is Brightwater walkable?"
 **Answer:**
 
 ```
+
+Yes, Brightwater is walkable; the town can be crossed end to end in about 35 minutes. This information comes from `guide_brightwater.md`.
+
+Sources retrieved: guide_brightwater.md, guide_kestrelford.md, guide_regional_transport.md, guide_walking.md
 ```
 
 **My relevance cutoff:**
@@ -102,7 +112,14 @@ Built 1954, partially renovated 2008.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+|What is the least accessible city?  | yes | 0.555 |
+|"Several riverside businesses in Brightwater close entirely during which months?" | yes | 0.178 |
+|"How to get to Halden Bay?" | yes | 0.295 |
+|"When is it best to visit Halden Bay?" | yes | 0.347 |
+|"What to see in Corry Vale?" | yes | 0.451 |
+|"Is Brightwater walkable?" | yes | 0.435 |
+|"What is the capital of Mongolia?" | no | 0.887 |
+|"What is the recommended dosage of ibuprofen for a headache?" | no | 0.829 |
 
 ## How I Used AI
 
