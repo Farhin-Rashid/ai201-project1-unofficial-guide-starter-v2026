@@ -88,7 +88,7 @@ Sources retrieved: guide_brightwater.md, guide_kestrelford.md, guide_regional_tr
 
 **My relevance cutoff:** 0.5
 
-I tested the system with questions that are answered in the corpus and questioned that are not. The first group where a correct response was given all had a best distance below 0.5 and that is how I picked my relevance cutoff. The later group all had high best distance scores (above 0.8).
+I tested the system with questions that are answered in the corpus and questioned that are not. The first group where a correct response was given all had a best distance below 0.5, and that is how I picked my relevance cutoff. The later group all had high best distance scores (above 0.8).
 
 | Question | In corpus? | Best distance |
 |---|---|---|
@@ -120,6 +120,7 @@ I tested the system with questions that are answered in the corpus and questione
 I asked Gemini about certain commands to use since I'm not completely familiar with the command prompt.
 I used it when typing the wrong commands gave some unintended output, for example, when I didn't pull from origin before committing my changes.
 This helped me remember to do so next time.
+
 **2.**
 I asked Gemini to write the chunking function that I wanted and how to execute it. It explained what functions to use and what each line did.
 It used different variable names, so I had to read through chunker.py myself and name the variables correctly.
