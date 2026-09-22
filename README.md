@@ -29,18 +29,10 @@
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** ~1 sentence of variable lenght
+**Overlap:** 0 characters
 
-<!-- What about YOUR documents made you pick these numbers? Short posts and
-     long sectioned guides don't want the same chunking, and "800 seemed
-     reasonable" earns nothing. Point at something you noticed when you read
-     the documents in Milestone 1.
-
-     If you changed your mind partway through, say so and say why. That's worth
-     more than pretending you got it right first time.
-
-     Milestone 3. -->
+When inspecting the campus_life corpus in Milestone 1, I noticed the documents are forum-style responses consisting of factual sentences rather than opinion-based like in advice_threads. Initially, it seemed straightforward to have entire documents as chunks, as they were very short, but later decided that sentence-level splitting works better for vector similarity matching because each sentence answers a distinct factual question, such as "June and September are the sweet spots for visiting Halden Bay."
 
 ## Sample Chunks
 
@@ -53,29 +45,31 @@
 
      Milestone 3. -->
 
-**Chunk 1** — source: `` — produced by: ``
+**Chunk 1** — source: `admin_add_drop_deadline.txt#0` — produced by: `chunker.py::split_documents`
 
-```
-```
+``` On the add/drop deadline
 
-**Chunk 2** — source: `` — produced by: ``
-
-```
+You can add a course through the end of the second week.
 ```
 
-**Chunk 3** — source: `` — produced by: ``
+**Chunk 2** — source: `course_cs_340.txt#2` — produced by: ` chunker.py::split_documents`
 
-```
-```
-
-**Chunk 4** — source: `` — produced by: ``
-
-```
+``` Assessment: one midterm and a final, both open-book.
 ```
 
-**Chunk 5** — source: `` — produced by: ``
+**Chunk 3** — source: ` course_stat_150.txt#3` — produced by: `chunker.py::split_documents`
 
+``` No curve, but the lowest midterm is dropped.
 ```
+
+**Chunk 4** — source: ` dining_the_ridgeway_cafe_followup.txt#3` — produced by: `chunker.py::split_documents`
+
+``` Also worth saying: seating is tight; about 40 seats for a building of 900.
+```
+
+**Chunk 5** — source: `housing_morrow_house.txt#1` — produced by: `chunker.py::split_documents`
+
+``` Built 1954, partially renovated 2008.
 ```
 
 ## Sample Answer
