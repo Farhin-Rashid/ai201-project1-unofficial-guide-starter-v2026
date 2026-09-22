@@ -19,7 +19,7 @@ I used the city_guides corpus to complete this unit. The questions this system a
 **Chunk size:** ~1 sentence of variable lenght  
 **Overlap:** 0 characters
 
-When inspecting the campus_life corpus in Milestone 1, I noticed the documents are forum-style responses consisting of factual sentences rather than opinion-based like in advice_threads. Initially, it seemed straightforward to have entire documents as chunks, as they were very short, but later I decided that sentence-level splitting works better for vector similarity matching because each sentence answers a distinct factual question, such as "June and September are the sweet spots for visiting Halden Bay."
+When inspecting the city_guides corpus in Milestone 1, I noticed the documents are forum-style responses consisting of factual sentences rather than opinion-based like in advice_threads. Initially, it seemed straightforward to have entire documents as chunks, as they were very short, but later I decided that sentence-level splitting works better for vector similarity matching because each sentence answers a distinct factual question, such as "June and September are the sweet spots for visiting Halden Bay."
 
 ## Sample Chunks
 
