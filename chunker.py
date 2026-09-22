@@ -21,7 +21,7 @@ If you get stuck for 30 minutes, `fallback_split` is the original. Switch back
 to it, write down what you saw, and move on. That's a real observation about
 your pipeline, not giving up.
 """
-
+import re
 from dataclasses import dataclass
 
 import config
@@ -81,23 +81,28 @@ def fallback_split(
 
 
 def split_documents(documents: list[Document]) -> list[Chunk]:
+    """Splits documents into sentence-level chunks using punctuation boundaries (. ! ?).
+    Ideal for short posts like campus_life where individual sentences contain distinct facts.
     """
-    Split documents into chunks. ⚠️ REPLACE THE BODY OF THIS IN MILESTONE 3.
-
-    Right now it just calls the fallback. That is the plain, generic behaviour
-    the brief is talking about.
-
-    When you write your own strategy, set `produced_by` to
-    "chunker.py::split_documents" so your README's Sample Chunks section names
-    the right function. `app.py chunks` prints that string for you.
-
-    Things worth thinking about before you write any code:
-      - Are your documents short posts or long guides?
-      - Is the useful information in one sentence, or spread over a paragraph?
-      - Would splitting on paragraph breaks keep more thoughts intact than
-        splitting on a character count?
-    """
-    return fallback_split(documents)
+    chunks = []
+    for doc in documents:
+        # Split text on sentence boundaries followed by whitespace
+        sentences = re.split(r'(?<=[.!?])\s+', doc.text.strip())
+        
+        for idx, sentence in enumerate(sentences):
+            sentence_text = sentence.strip()
+            # Ignore empty strings or accidental punctuation fragments
+            if len(sentence_text) > 5:
+                chunks.append(
+                    Chunk(
+                        text=sentence_text,
+                        source=doc.source,
+                        index=idx,
+                        produced_by="chunker.py::split_documents"
+                    )
+                )
+                
+    return chunks
 
 
 def describe(chunks: list[Chunk]) -> str:
