@@ -55,41 +55,37 @@ in at least 4 of 5 tries.
 
 ---
 
-## 4. Something about your chunks
+## 4. Chunks are clear and concise
 
-<!-- YOU WRITE THIS ONE.
+When I ask a question, the system doesn't try to overexplain about the topic
+and gives the exact detail it is being asked.
 
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
+<!-- At least 4 out of 5 answers contain around 20 - 75 words. -->
 
 
 
 **Why this target:**
+<!-- A 20 word minimum limit ensures the system provides sufficient context 
+     while the 75 word cap ensures the system does not return unnecessarily
+     wordy responses. -->
 
 
 
 ---
 
-## 5. Your choice
+## 5. Answers are generated reasonably quickly
+The system generates an answer within a maximum time limit. 
+If it fails to do so, it is clear that the corpus does not cover
+the question and so, the system returns "I don't have enough information about that". (see criteria ##3)
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
+<!-- At least 4 out of 5 answers are generated within 3s. -->
 
 
 
 **Why this target:**
+
+<!-- A 3 second threshold allows sufficient time for vector retrieval and the LLM API calls
+     while maintaining a responsive experience for end users. -->
 
 
 
