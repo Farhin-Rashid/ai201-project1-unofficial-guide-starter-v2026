@@ -152,11 +152,11 @@ It used different variable names, so I had to read through chunker.py myself and
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 | 1/5 | 1/5 | 1/5 | MISSED |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 1/5 | 1/5 | 1/5 | BROKEN |
 | 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
 | 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 | 4. Chunks are clear and concise | 4 of 5 | 5/5| 5/5 | 5/5 | MET |
-| 5. Answers are generated reasonably quickly | 4 of 5 | 3/5 | 3/5 | 4/5 | MISSED |
+| 5. Answers are generated reasonably quickly | 4 of 5 | 3/5 | 3/5 | 4/5 | BROKEN |
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
@@ -209,11 +209,11 @@ Out-of-scope questions (the gate should refuse these):
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Retrieved chunk contains the answer | MISSED | the cmd prompt output showed only 1/5 passed |
+| 2 | Every answer names a source | MET | Answers specified sources |
+| 3 | Gate stops out-of-corpus questions | MET | Gate refused 5/5 out-of-scope questions |
+| 4 | Chunks are clear and concise | MET | Answers are to the point |
+| 5 | Answers are generated reasonably quickly | BROKEN | The first answer took a while to be generated, and a few others in the middle as well, so I readjusted the minimum time requirement |
 
 ## Diagnoses
 
