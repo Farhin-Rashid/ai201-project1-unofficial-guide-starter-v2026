@@ -152,7 +152,7 @@ It used different variable names, so I had to read through chunker.py myself and
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 | 1/5 | 1/5 | 1/5 | BROKEN |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 1/5 | 1/5 | 1/5 | MISSED |
 | 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
 | 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 | 4. Chunks are clear and concise | 4 of 5 | 5/5| 5/5 | 5/5 | MET |
@@ -234,6 +234,11 @@ Out-of-scope questions (the gate should refuse these):
      low, and which one you'd tighten and to what.
 
      Milestone 3. -->
+     The system met 3/5 of my criteria.
+
+     Criterion 5 needed a small adjustment to be met. 
+
+     Running run_eval.py returned 1/5 passes, but when I looked at results/run_2026-09-23_2024_before.md, the responses were correct. So, I'm a little confused about criterion 1.          However, I believe the error might be in either scorer.py or run_eval.py, where I'm comparing the responses against my expected answers.
 
 ## The Improvement
 
