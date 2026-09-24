@@ -196,6 +196,46 @@ Out-of-scope questions (the gate should refuse these):
   refused  (best distance 0.853)  How do I write a for loop in Rust?
   -> gate refused 5 of 5
 
+
+| Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
+|---|---|---|---|---|---|
+| 1. Retrieved chunk contains the answer | 4 of 5 | 2/5 | 2/5 | 2/5 | MISSED |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Chunks are clear and concise | 4 of 5 | 5/5| 5/5 | 5/5 | MET |
+| 5. Answers are generated reasonably quickly | 4 of 5 | 4/5 | 4/5 | 4/5 | MET |
+
+
+
+How to get to Halden Bay?
+  run 1: pass  (best distance 0.295)
+  run 2: pass  (best distance 0.295)
+  run 3: pass  (best distance 0.295)
+
+When is it best to visit Halden Bay?
+  run 1: fail  (best distance 0.347)
+  run 2: fail  (best distance 0.347)
+  run 3: fail  (best distance 0.347)
+
+What to see in Corry Vale?
+  run 1: fail  (best distance 0.451)
+  run 2: fail  (best distance 0.451)
+  run 3: fail  (best distance 0.451)
+
+Is Brightwater walkable?
+  run 1: pass  (best distance 0.435)
+  run 2: pass  (best distance 0.435)
+  run 3: pass  (best distance 0.435)
+
+Out-of-scope questions (the gate should refuse these):
+  refused  (best distance 0.887)  What is the capital of Mongolia?
+  refused  (best distance 0.897)  How do I change the oil in a diesel engine?
+  refused  (best distance 0.903)  Who won the 1994 World Cup?
+  refused  (best distance 0.829)  What is the recommended dosage of ibuprofen for a headache?
+  refused  (best distance 0.853)  How do I write a for loop in Rust?
+  -> gate refused 5 of 5
+
+  
 ## Verdicts
 
 <!-- MET or MISSED for each of the five, against the target you wrote last
@@ -242,7 +282,7 @@ Out-of-scope questions (the gate should refuse these):
 
 ## The Improvement
 
-**What I changed:**
+**What I changed:** 
 
 **Why I picked it:**
 
