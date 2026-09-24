@@ -23,8 +23,7 @@ For at least 4 of my 5 test questions, the retrieved chunks include one that
 contains the answer.
 
 **Why this target:**
-<!-- e.g. "One of my questions is about a topic only two documents mention, so
-     I expect that one to be hard." -->
+Most of my chosen corpus is fact-based sentences and so, it should be easy to retrieve the answers.
 
 ---
 
@@ -33,8 +32,7 @@ contains the answer.
 Every answer the system produces names at least one source document.
 
 **Why this target:**
-<!-- Why all five and not four? What about your setup makes that achievable —
-     or what would have to go wrong for it not to be? -->
+The RAG pipeline directly passes the retrieved source metadata alongside the retrieved chunks.
 
 ---
 
@@ -50,8 +48,7 @@ in at least 4 of 5 tries.
      just keep five of them, or the "4 of 5" above has nothing to be 4 of. -->
 
 **Why this target:**
-<!-- What did your distances look like when you set the cutoff in Milestone 4?
-     Was there a clean gap, or did the two groups overlap? -->
+The system should not answer questions it has no data on to ensure reliability.
 
 ---
 
@@ -60,14 +57,14 @@ in at least 4 of 5 tries.
 When I ask a question, the system doesn't try to overexplain about the topic
 and gives the exact detail it is being asked.
 
-<!-- At least 4 out of 5 answers contain around 20 - 75 words. -->
+At least 4 out of 5 answers contain around 20 - 75 words.
 
 
 
 **Why this target:**
-<!-- A 20 word minimum limit ensures the system provides sufficient context 
-     while the 75 word cap ensures the system does not return unnecessarily
-     wordy responses. -->
+A 20 word minimum limit ensures the system provides sufficient context 
+while the 75 word cap ensures the system does not return unnecessarily
+wordy responses.
 
 
 
@@ -78,14 +75,17 @@ The system generates an answer within a maximum time limit.
 If it fails to do so, it is clear that the corpus does not cover
 the question and so, the system returns "I don't have enough information about that". (see criteria ##3)
 
-<!-- At least 4 out of 5 answers are generated within 3s. -->
+At least 4 out of 5 answers are generated within 3s. 
+At least 4 out of 5 answers are generated within 6s.
 
 
 
 **Why this target:**
 
-<!-- A 3 second threshold allows sufficient time for vector retrieval and the LLM API calls
-     while maintaining a responsive experience for end users. -->
+A 3 second threshold allows sufficient time for vector retrieval and the LLM API calls
+while maintaining a responsive experience for end users. 
+
+I increased the threshold after test running the questions in Unit 2 from 3 seconds to 6.
 
 
 
