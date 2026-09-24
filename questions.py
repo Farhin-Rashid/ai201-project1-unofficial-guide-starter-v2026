@@ -22,7 +22,7 @@ names a target of "4 of 5", and four of three is not a thing.
 """
 
 QUESTIONS = [
-    #{"question": "Several riverside businesses in Brightwater close entirely during which months?", "expects": "January to March"},
+    {"question": "Several riverside businesses in Brightwater close entirely during which months?", "expects": "January March"},
     {"question": "How to get to Halden Bay?", "expects": "coast road"},
     {"question": "When is it best to visit Halden Bay?", "expects": "June September"},
     {"question": "What to see in Corry Vale?", "expects": "valley"},
