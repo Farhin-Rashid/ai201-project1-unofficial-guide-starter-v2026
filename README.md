@@ -161,6 +161,40 @@ It used different variable names, so I had to read through chunker.py myself and
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
+The file produced by python run_eval.py was results\run_2026-09-23-2010_before.md and the output my system generated was as follows:
+
+Several riverside businesses in Brightwater close entirely during which months?
+  run 1: fail  (best distance 0.178)
+  run 2: fail  (best distance 0.178)
+  run 3: fail  (best distance 0.178)
+
+How to get to Halden Bay?
+  run 1: pass  (best distance 0.295)
+  run 2: pass  (best distance 0.295)
+  run 3: pass  (best distance 0.295)
+
+When is it best to visit Halden Bay?
+  run 1: fail  (best distance 0.347)
+  run 2: fail  (best distance 0.347)
+  run 3: fail  (best distance 0.347)
+
+What to see in Corry Vale?
+  run 1: fail  (best distance 0.451)
+  run 2: fail  (best distance 0.451)
+  run 3: fail  (best distance 0.451)
+
+Is Brightwater walkable?
+  run 1: fail  (best distance 0.435)
+  run 2: fail  (best distance 0.435)
+  run 3: fail  (best distance 0.435)
+
+Out-of-scope questions (the gate should refuse these):
+  refused  (best distance 0.887)  What is the capital of Mongolia?
+  refused  (best distance 0.897)  How do I change the oil in a diesel engine?
+  refused  (best distance 0.903)  Who won the 1994 World Cup?
+  refused  (best distance 0.829)  What is the recommended dosage of ibuprofen for a headache?
+  refused  (best distance 0.853)  How do I write a for loop in Rust?
+  -> gate refused 5 of 5
 
 ## Verdicts
 
