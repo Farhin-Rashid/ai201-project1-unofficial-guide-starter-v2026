@@ -2,18 +2,9 @@
 
 <!-- Replace this line with your name and which corpus you picked. -->
 
-> **This file is your submission.** Fill it in as you go — most sections get
-> written during the milestone that produces them, not at the end.
+> **Name:** Farhin Rashid
 >
-> How the starter works, and every command you'll need, is in `RUNNING.md`.
-> Leave that file alone.
->
-> **Paste everything as text.** No screenshots, no video. A typed table gets
-> full credit; a picture of the same table gets none.
->
-> Delete these instruction blocks as you replace them. The `<!-- -->` comments
-> are notes to you and don't show up when the page renders — you can leave them
-> or remove them.
+> **Corpus used:** city_guides
 
 ---
 
@@ -21,18 +12,14 @@
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
-
-     Milestone 5. -->
+I used the city_guides corpus to complete this unit. The questions this system answers are things a tourist would look up before visiting these cities. It tells you which cities are walkable, which seasons are the best time to visit, and how to get there.
 
 ## Chunking Strategy
 
 **Chunk size:** ~1 sentence of variable lenght  
 **Overlap:** 0 characters
 
-When inspecting the campus_life corpus in Milestone 1, I noticed the documents are forum-style responses consisting of factual sentences rather than opinion-based like in advice_threads. Initially, it seemed straightforward to have entire documents as chunks, as they were very short, but later decided that sentence-level splitting works better for vector similarity matching because each sentence answers a distinct factual question, such as "June and September are the sweet spots for visiting Halden Bay."
+When inspecting the city_guides corpus in Milestone 1, I noticed the documents are forum-style responses consisting of factual sentences rather than opinion-based like in advice_threads. Initially, it seemed straightforward to have entire documents as chunks, as they were very short, but later I decided that sentence-level splitting works better for vector similarity matching because each sentence answers a distinct factual question, such as "June and September are the sweet spots for visiting Halden Bay."
 
 ## Sample Chunks
 
@@ -99,16 +86,9 @@ Yes, Brightwater is walkable; the town can be crossed end to end in about 35 min
 Sources retrieved: guide_brightwater.md, guide_kestrelford.md, guide_regional_transport.md, guide_walking.md
 ```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.5
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+I tested the system with questions that are answered in the corpus and questioned that are not. The first group where a correct response was given all had a best distance below 0.5, and that is how I picked my relevance cutoff. The later group all had high best distance scores (above 0.8).
 
 | Question | In corpus? | Best distance |
 |---|---|---|
@@ -120,6 +100,10 @@ Sources retrieved: guide_brightwater.md, guide_kestrelford.md, guide_regional_tr
 |"Is Brightwater walkable?" | yes | 0.435 |
 |"What is the capital of Mongolia?" | no | 0.887 |
 |"What is the recommended dosage of ibuprofen for a headache?" | no | 0.829 |
+|"How do I change the oil in a diesel engine?" | no | 0.897 | 
+|"Who won the 1994 World Cup?" | no | 0.903 |
+|"How do I write a for loop in Rust?" | no | 0.853 |
+
 
 ## How I Used AI
 
@@ -133,8 +117,13 @@ Sources retrieved: guide_brightwater.md, guide_kestrelford.md, guide_regional_tr
      Milestone 5. -->
 
 **1.**
+I asked Gemini about certain commands to use since I'm not completely familiar with the command prompt.
+I used it when typing the wrong commands gave some unintended output, for example, when I didn't pull from origin before committing my changes.
+This helped me remember to do so next time.
 
 **2.**
+I asked Gemini to write the chunking function that I wanted and how to execute it. It explained what functions to use and what each line did.
+It used different variable names, so I had to read through chunker.py myself and name the variables correctly.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
